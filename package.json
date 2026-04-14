@@ -1,0 +1,34 @@
+{
+  "name": "dynamic-oauth-setup",
+  "version": "1.0.0",
+  "description": "Universal OAuth authentication for multiple platforms (Google, Jira, Notion, Discord, etc.)",
+  "type": "module",
+  "main": "auth.js",
+  "scripts": {
+    "start": "node auth.js",
+    "auth:google:gmail": "node auth.js google gmail",
+    "auth:google:drive": "node auth.js google drive",
+    "auth:jira": "node auth.js jira jira",
+    "auth:notion": "node auth.js notion notion",
+    "auth:discord": "node auth.js discord discord"
+  },
+  "dependencies": {
+    "googleapis": "^118.0.0",
+    "open": "^9.1.0",
+    "node-fetch": "^3.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "oauth",
+    "authentication",
+    "google",
+    "jira",
+    "notion",
+    "discord",
+    "multi-platform"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -1,0 +1,126 @@
+{
+  "google": {
+    "provider": "google",
+    "description": "Google Cloud Platform OAuth",
+    "web": {
+      "client_id": "YOUR_CLIENT_ID.apps.googleusercontent.com",
+      "project_id": "YOUR_PROJECT_ID",
+      "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+      "token_uri": "https://oauth2.googleapis.com/token",
+      "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+      "client_secret": "YOUR_CLIENT_SECRET",
+      "redirect_uris": [
+        "http://localhost:3000/oauth2callback"
+      ]
+    },
+    "services": {
+      "gmail": {
+        "serviceName": "gmail",
+        "description": "Gmail - Read, compose, and send emails",
+        "scopes": [
+          "https://www.googleapis.com/auth/gmail.modify",
+          "https://www.googleapis.com/auth/gmail.compose",
+          "https://www.googleapis.com/auth/gmail.send"
+        ],
+        "outputPath": ".gmail-credentials.json",
+        "apiVersion": "v1"
+      },
+      "drive": {
+        "serviceName": "drive",
+        "description": "Google Drive - Full access to files and folders",
+        "scopes": [
+          "https://www.googleapis.com/auth/drive"
+        ],
+        "outputPath": ".drive-credentials.json",
+        "apiVersion": "v3"
+      },
+      "calendar": {
+        "serviceName": "calendar",
+        "description": "Google Calendar - Manage calendars and events",
+        "scopes": [
+          "https://www.googleapis.com/auth/calendar"
+        ],
+        "outputPath": ".calendar-credentials.json",
+        "apiVersion": "v3"
+      },
+      "sheets": {
+        "serviceName": "sheets",
+        "description": "Google Sheets - Read and write spreadsheets",
+        "scopes": [
+          "https://www.googleapis.com/auth/spreadsheets",
+          "https://www.googleapis.com/auth/drive"
+        ],
+        "outputPath": ".sheets-credentials.json",
+        "apiVersion": "v4"
+      },
+      "docs": {
+        "serviceName": "docs",
+        "description": "Google Docs - Read and write documents",
+        "scopes": [
+          "https://www.googleapis.com/auth/documents"
+        ],
+        "outputPath": ".docs-credentials.json",
+        "apiVersion": "v1"
+      },
+      "forms": {
+        "serviceName": "forms",
+        "description": "Google Forms - Read forms and responses",
+        "scopes": [
+          "https://www.googleapis.com/auth/forms"
+        ],
+        "outputPath": ".forms-credentials.json",
+        "apiVersion": "v1"
+      }
+    }
+  },
+  "jira": {
+    "provider": "jira",
+    "description": "Atlassian Jira OAuth",
+    "web": {
+      "client_id": "YOUR_JIRA_CLIENT_ID",
+      "client_secret": "YOUR_JIRA_CLIENT_SECRET",
+      "auth_uri": "https://auth.atlassian.com/authorize",
+      "token_uri": "https://auth.atlassian.com/oauth/token",
+      "redirect_uris": [
+        "http://localhost:3000/oauth2callback"
+      ]
+    },
+    "services": {
+      "jira": {
+        "serviceName": "jira",
+        "description": "Jira - Project and issue management",
+        "scopes": [
+          "read:jira-work",
+          "write:jira-work",
+          "read:jira-user",
+          "offline_access"
+        ],
+        "outputPath": ".jira-credentials.json",
+        "apiBase": "https://api.atlassian.com"
+      }
+    }
+  },
+  "notion": {
+    "provider": "notion",
+    "description": "Notion API OAuth",
+    "hasOwnProject": true,
+    "web": {
+      "client_id": "YOUR_NOTION_CLIENT_ID",
+      "client_secret": "YOUR_NOTION_CLIENT_SECRET",
+      "auth_uri": "https://api.notion.com/v1/oauth/authorize",
+      "token_uri": "https://api.notion.com/v1/oauth/token",
+      "redirect_uris": [
+        "http://localhost:3000/oauth2callback"
+      ]
+    },
+    "services": {
+      "notion": {
+        "serviceName": "notion",
+        "description": "Notion - Workspace and database access",
+        "scopes": [],
+        "outputPath": ".notion-credentials.json",
+        "apiBase": "https://api.notion.com"
+      }
+    }
+  }
+}
