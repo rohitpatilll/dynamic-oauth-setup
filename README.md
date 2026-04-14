@@ -1,6 +1,6 @@
 # Dynamic OAuth Setup
 
-Universal OAuth authentication for multiple platforms.
+A universal OAuth authenticator - Proof of Concept (PoC) project to understand OAuth 2.0 flows across multiple platforms (Google, Jira, Notion, Discord, etc.).
 
 ## Quick Start
 
